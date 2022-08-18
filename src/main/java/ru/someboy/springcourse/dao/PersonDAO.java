@@ -1,6 +1,10 @@
 package ru.someboy.springcourse.dao;
 
 import org.springframework.stereotype.Component;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import ru.someboy.springcourse.model.Person;
 
 import java.util.ArrayList;
@@ -29,5 +33,10 @@ public class PersonDAO {
 
     public Person show(int id) {
         return people.stream().filter(person -> person.getId() == id).findAny().orElse(null);
+    }
+
+    public void save(Person person) {
+        person.setId(++PEOPLE_COUNT);
+        people.add(person);
     }
 }
