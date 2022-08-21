@@ -14,6 +14,7 @@
 
     <spring.version>5.3.22</spring.version>
   </properties>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -67,8 +68,9 @@
     </dependency>
 
   </dependencies>
+
   <build>
-    <finalName>CRUD_App</finalName>
+    <finalName>spring-mvc-app1</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (maybe moved to parent pom) -->
       <plugins>
         <plugin>
@@ -113,4 +115,5 @@
       </plugin>
     </plugins>
   </build>
+
 </project>

@@ -1,11 +1,7 @@
 package ru.someboy.springcourse.dao;
 
 import org.springframework.stereotype.Component;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import ru.someboy.springcourse.model.Person;
+import ru.someboy.springcourse.models.Person;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +12,7 @@ import java.util.List;
 @Component
 public class PersonDAO {
     private static int PEOPLE_COUNT;
-    private final List<Person> people;
+    private List<Person> people;
 
     {
         people = new ArrayList<>();
